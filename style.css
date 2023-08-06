@@ -1,0 +1,14 @@
+/* This rule has lower specificity */
+div {
+    color: blue;
+  }
+  
+  /* This rule has higher specificity due to the class selector */
+  .important-text {
+    color: red;
+  }
+  
+  /* This rule has even higher specificity due to the ID selector */
+  #myDiv {
+    color: green;
+  }

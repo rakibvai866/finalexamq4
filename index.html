@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUS-4</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div id="myDiv" class="important-text">CSS specificity!</div>
+
+    <p>    CSS specificity is a concept that determines which CSS rule gets applied when there are multiple rules targeting the same element. It is a set of rules that define the priority of CSS selectors, helping the browser decide which styles should be applied to an element when there are conflicting styles.</p>
+    <p>
+        The specificity of a selector is calculated based on the combination of its components, which are:
+
+          1. **Inline styles**: Styles applied directly to an element using the `style` attribute. These have the highest specificity. <br>
+
+          2. **ID selectors**: Selectors that target elements using their `id` attribute, written as `#elementId`. Each occurrence of an ID selector adds specificity. <br>
+          
+          3. **Class selectors, attribute selectors, and pseudo-classes**: These include selectors like `.className`, `[attribute]`, and `:hover`. They have a lower specificity compared to ID selectors. <br>
+          
+          4. **Element selectors and pseudo-elements**: These selectors target HTML elements directly, like `div` or `p`, and pseudo-elements like `::before` or `::after`. They have the lowest specificity. <br>
+    </p>
+
+    <p>
+        The specificity is calculated by counting the number of occurrences for each type of selector in a CSS rule. For example:
+
+        - `p` has a specificity of 0,0,1,0
+        - `.className` has a specificity of 0,0,1,1
+        - `#elementId` has a specificity of 0,1,0,0
+        
+        The components are ordered from left to right, and a larger number in the leftmost position takes precedence over smaller numbers in the rightmost positions. So, if two rules have the same specificity, the one that appears later in the CSS file or in the style attribute will be applied. <br>
+        
+        Here's a quick example to illustrate CSS specificity:
+        
+        In this example, the text inside the `div` will be green because the rule with the ID selector (`#myDiv`) has the highest specificity and takes precedence over the other rules targeting the div element.
+        
+        Understanding CSS specificity is crucial to avoid unexpected styling conflicts and ensures that the correct styles are applied to your HTML elements.
+    </p>
+
+
+    <br><br>
+
+    <div class="image">
+        <img src="./html.png" alt="html">
+        <img src="./css.png" alt="css">
+    </div>
+
+
+</body>
+</html>
